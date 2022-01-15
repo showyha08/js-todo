@@ -23,6 +23,21 @@ const onClickAdd = () => {
   // 未完了リストに追加
   document.getElementById("incomplete-list").appendChild(li);
 
+  // buttonタグの追加
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+  completeButton.addEventListener("click", () => {
+    alert("完了");
+  });
+
+  // 削除タグ生成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+
+  // divタグの子要素に設定
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
+
   console.log(div);
   console.log(li);
 };
